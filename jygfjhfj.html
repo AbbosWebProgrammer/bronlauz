@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: sans-serif;
+            overflow: hidden;
+        }
+        
+        label {
+            background: #444;
+            color: #fff;
+            transition: transform 400ms ease-out;
+            display: inline-block;
+            min-height: 100%;
+            width: 100%;
+            height: 100%;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            line-height: 100vh;
+        }
+        
+        form {
+            width:100%;
+            height:100%;
+            white-space: nowrap;
+        }
+        input {
+            position: absolute;
+            display: none !important;        }
+        
+        .keys {
+            position: fixed;
+            z-index: 10;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            color: #fff;
+            text-align: center;
+            transition: all 300ms linear;
+            opacity: 0;
+        }
+        
+        input:focus ~ .keys {
+            opacity: 0.8;
+        }
+        
+        input:nth-of-type(1):checked ~ label:nth-of-type(1), 
+        input:nth-of-type(2):checked ~ label:nth-of-type(2),
+        input:nth-of-type(3):checked ~ label:nth-of-type(3),
+        input:nth-of-type(4):checked ~ label:nth-of-type(4){
+           z-index: 0;
+        }
+        
+        input:nth-of-type(1):checked ~ label {
+            transform: translate3d(0, 0, 0);
+        }
+        
+        input:nth-of-type(2):checked ~ label {
+            transform: translate3d(-100%, 0, 0);
+        }
+        
+        input:nth-of-type(3):checked ~ label {
+            transform: translate3d(-200%, 0, 0);
+        }
+        
+        input:nth-of-type(4):checked ~ label {
+            transform: translate3d(-300%, 0, 0);
+        }
+        
+        label:before, label:after {
+            color: rgb(34, 34, 34) !important;
+            background-color: rgba(255, 255, 255, 0.9) !important;
+            border: 1px solid rgba(0, 0, 0, 0.08) !important;
+            position: absolute;
+            padding: 9px 12px;
+            font-size: 1rem;
+            height: 11px;
+            width: 5px;
+            line-height: 5px;
+            top: 50%;
+            transform: translate3d(0, -50%, 0);
+            border-radius: 50%;
+            cursor: pointer;   
+                    
+        }
+        
+         
+        label:before {
+            content: "\203A";
+            right: 100%;
+            margin-right: 20px;
+            font-weight: 900;
+
+        }
+        label:after {
+            content: "\2039";
+            left: 100%;
+            margin-left: 20px;
+            font-weight: 900;
+
+        }
+        label img{
+            height: 100%;
+            width: auto;
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <div class="divclass">
+        <form>
+
+            <input type="radio" name="fancy" autofocus value="clubs" id="clubs" />
+            <input type="radio" name="fancy" value="hearts" id="hearts" />
+            <input type="radio" name="fancy" value="spades" id="spades" />
+            <input type="radio" name="fancy" value="diamonds" id="diamonds" />			
+            <label for="clubs"><img src="https://telegra.ph/file/880ec8d0e9c3e0e9843c0.png" alt="image" width="500" height="600"></label><!-- 
+             --><label for="hearts"><img src="https://telegra.ph/file/880ec8d0e9c3e0e9843c0.png" alt="image" width="500" height="600"></label><!-- 
+             --><label for="spades"><img src="https://telegra.ph/file/880ec8d0e9c3e0e9843c0.png" alt="image" width="500" height="600"></label><!-- 
+             --><label for="diamonds"><img src="https://telegra.ph/file/880ec8d0e9c3e0e9843c0.png" alt="image" width="500" height="600"></label>
+        </form>
+    </div>
+   
+</body>
+</html>
