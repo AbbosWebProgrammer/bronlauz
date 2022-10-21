@@ -1,0 +1,48 @@
+.footer-distributed{
+	background: rgba(241, 241, 241, 0.692);
+	box-shadow: 0 1px 1px 0 rgba(252, 252, 252, 0.12);
+	box-sizing: border-box;
+	font: bold 16px sans-serif;
+	padding: 10px;
+}
+
+.footer-distributed-image{
+	width: 200px;
+	padding: 10px;
+ 
+}
+.about-company{
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 400;
+
+
+}
+.follow_us_css{
+	text-align: center;
+	color: black !important;
+	a{
+		color: black !important;
+
+	}
+	p{
+
+		font-size: 14px;
+		line-height: 20px;
+		font-weight: 400;
+	}
+	svg{
+		font-size: 30px;
+		line-height: 20px;
+		padding: 10px;
+		font-weight: 400;
+	}
+	.col-sm-6 {
+		padding: 10px;}
+}
+.footer-yandex-map{
+	width: 100% !important;
+	max-width: 100% !important;
+	height: 160px !important;
+	max-height: 160px !important;
+}
